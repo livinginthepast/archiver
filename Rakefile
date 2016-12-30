@@ -73,9 +73,9 @@ namespace :nginx do
           -days 3650 \
           -nodes \
           -x509 \
-          -keyout nginx/certs/local-dev.archver.ssl.key \
-          -out nginx/certs/local-dev.archver.ssl.crt \
-          -config /tmp/openssl.archiver.cnf
+          -keyout nginx/certs/local-dev.archiver.ssl.key \
+          -out nginx/certs/local-dev.archiver.ssl.crt \
+          -config /tmp/archiver.openssl.cnf
         }
       end
     end
