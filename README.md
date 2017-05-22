@@ -19,8 +19,8 @@ sudo bash -c 'echo "rdr-anchor \"forwarding\"" > /etc/pf-local-dev.conf'
 sudo bash -c 'echo "load anchor \"forwarding\" from \"/etc/pf.anchors/com.dev\"" >> /etc/pf-local-dev.conf'
 
 sudo bash -c 'echo "rdr pass on lo0 inet proto udp from any to 127.0.0.1 port 53 -> 127.0.0.1 port 8053" > /etc/pf.anchors/com.dev'
-sudo bash -c 'echo "rdr pass on lo0 inet proto tcp from any to 127.0.0.1 port 80 -> 127.0.0.1 port 8088" > /etc/pf.anchors/com.dev'
-sudo bash -c 'echo "rdr pass on lo0 inet proto tcp from any to 127.0.0.1 port 443 -> 127.0.0.1 port 8443" > /etc/pf.anchors/com.dev'
+sudo bash -c 'echo "rdr pass on lo0 inet proto tcp from any to 127.0.0.1 port 80 -> 127.0.0.1 port 8088" >> /etc/pf.anchors/com.dev'
+sudo bash -c 'echo "rdr pass on lo0 inet proto tcp from any to 127.0.0.1 port 443 -> 127.0.0.1 port 8443" >> /etc/pf.anchors/com.dev'
 ```
 
 Enable port forwarding (this should be re-run after each reboot):
