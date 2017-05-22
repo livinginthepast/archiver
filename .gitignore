@@ -1,3 +1,6 @@
+.envrc
+.ruby-version
+
 nginx
 pg_data
 upload-handler
